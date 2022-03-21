@@ -15,6 +15,7 @@ import Artist from './components/Artist'
 import Trading from './components/Trading'
 
 
+
 function App() {
   return (
     <div>

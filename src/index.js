@@ -5,12 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //import Login from './components/auth/Login'
 //import Signup from './components/auth/Signup'
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 
 ReactDOM.render(
   <React.StrictMode>
 
-  <App/>
+  <Router basename='/'>
+  <Routes>
+    <Route exact path='/' element={  <App />}/>
+  </Routes>
+</Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
