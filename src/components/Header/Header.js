@@ -1,14 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { isNotLoggedIn } from "../../store/actionCreator/action.js";
+
 
 const Header = () => {
-  const validUser = useSelector((state) => state.loggedIn);
-  const dispatch = useDispatch();
-  const logOut = (e) => {
-    dispatch(isNotLoggedIn());
-  };
+  
   return (
     <header className="header">
       <div className="d-block  d-desk-none  margin-center pt-3">
@@ -78,15 +73,7 @@ const Header = () => {
               </div>
               <Link to="/">My Art</Link>
               <div className="d-none d-desk-block">
-                {validUser.login ? (
-                  <Link
-                    to="/login"
-                    onClick={logOut}
-                    className="btn btn-primary"
-                  >
-                    Log Out
-                  </Link>
-                ) : (
+                
                   <>
                     <Link to="/signup" className="btn btn-primary">
                       Sign up
@@ -95,7 +82,7 @@ const Header = () => {
                       Login
                     </Link>
                   </>
-                )}
+                
               </div>
             </div>
           </div>

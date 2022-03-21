@@ -3,28 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from './components/auth/Login'
-import Signup from './components/auth/Signup'
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import {Provider} from 'react-redux';
-import store from './store/store'
+//import Login from './components/auth/Login'
+//import Signup from './components/auth/Signup'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-    <Router basename='/'>
-        <Routes>
-          <Route exact path='/' element={  <App />}/>
-          <Route exact path='/login' element={ <Login/>}/>
-          <Route exact path='/signup' element={ <Signup />}/>
-        </Routes>
-      </Router>
-    </Provider>
-  
+
+  <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
